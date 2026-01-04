@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: clowner
+
+kafka:
+  bootstrap:
+    servers: 82.162.60.89:39092
+  producer:
+    client-id: clown-transformer-producer
+  consumer:
+    properties:
+      spring:
+        json:
+          trusted:
+            packages: com.api.clowner.dto
+    output-message:
+      group-id: clown-transformer
+
+telegram.bot.token: 8316832616:AAEF83Z7bHscf1qf2rhFzNScopGSzbu7drM
+allowed.user.ids: 5116628523, 1035190685, 531232012
